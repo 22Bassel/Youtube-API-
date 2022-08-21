@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "1845df9f-4435-463b-8c4b-289ae9b8ccd9",
+		"name": "YoutubeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GATEWAY",
+			"item": [
+				{
+					"name": "add comment then show all comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0ARrdaM_eFStitnaYQ7daPdliBQfA_0nadRxKlrwAhvDuXd1FrnIkLQGKvyIcUFd6BqSh9gqrmjUd6PQJ8z5OfGjK-cX1yOI2GDj45pl1c2OT3ix_4kVvTCTylSdDfduqOX7RJIM8IHT5HbFcgNSmmqpwlm8w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"videoId\": \"xk4_1vDrzzo\",\r\n    \"textOriginal\": \"last comment\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/Comment/AddShow?part=snippet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"Comment",
+								"AddShow"
+							],
+							"query": [
+								{
+									"key": "part",
+									"value": "snippet"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add like",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0ARrdaM9GPQwsuGWDdYV2EwqFTX8sSqXx_NJkhGPzTXYehnmQHjRcp_fL5eBBMi7XG8GgBffg0tfFN0rSKjmlcCpu0aWjl1qcJag3HxDewBbkWGKthAM2pgc07jZ3lGUGg-mhWJ1XVSxi1CUKuxVEmZOKMBOl",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8084/YoutubeLike/add?id=xk4_1vDrzzo&rating=like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"YoutubeLike",
+								"add"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer ya29.a0ARrdaM_eFStitnaYQ7daPdliBQfA_0nadRxKlrwAhvDuXd1FrnIkLQGKvyIcUFd6BqSh9gqrmjUd6PQJ8z5OfGjK-cX1yOI2GDj45pl1c2OT3ix_4kVvTCTylSdDfduqOX7RJIM8IHT5HbFcgNSmmqpwlm8w",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "xk4_1vDrzzo"
+								},
+								{
+									"key": "rating",
+									"value": "like"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/SearchService/search?key=AIzaSyDy54CCJ7Qz07Nk32bULR-gKdMzQgC7hEg&part=snippet&q=java&type=video&maxResults=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"SearchService",
+								"search"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "AIzaSyDy54CCJ7Qz07Nk32bULR-gKdMzQgC7hEg"
+								},
+								{
+									"key": "part",
+									"value": "snippet"
+								},
+								{
+									"key": "q",
+									"value": "java"
+								},
+								{
+									"key": "type",
+									"value": "video"
+								},
+								{
+									"key": "maxResults",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
