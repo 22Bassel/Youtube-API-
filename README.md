@@ -4,4 +4,4 @@ Springboot Youtube API  (V3) app ,the app works in a deployed way with Eurka (Mi
 to use search service you have to get API KEY (without authentication), but in other services you have to get token from your youtube account. you can see this site :https://stevesie.com/docs/pages/youtube-oauth-access-token . 
 but select the option youtube.force-ssl intsteade of youtube.readonly . 
 Also add like service need RabbitMQ , the queue it uses have to call : Like_queue . 
-Search service is a statefull service , it saves some data about user in DB.
+Search service is a stateful service , it saves some data about user in DB.
